@@ -1,0 +1,11 @@
+﻿options=0
+lang=ru,en,uk
+line.ru=Как проити в библиотеку?
+line.en=Have a nies day!
+line.uk=Я цього не разумію.
+expectedWrongWord.ru=проити
+expectedWrongWord.en=nies
+expectedWrongWord.uk=разумію
+expectedRightWord.ru=пройти
+expectedRightWord.en=nice
+expectedRightWord.uk=розумію
