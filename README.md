@@ -1,4 +1,4 @@
-For HW2, see SoapYandexTest/ folder. It includes the soapUI project file (Open Source, gradle-based version)
+For HW2, see SoapYandexTest/ folder. It includes the soapUI project file (Open Source, groovy-based version)
 
 # Test cases
 
@@ -67,7 +67,7 @@ We send all texts in a single CheckResponses request with `lang="en,ru,uk"`.
 
 ## optionCombinationTest
 
-The test checks how `options` work when combined. We use the same text for all test data, but we change 
+The test checks how `options` work when combined. We use the same text for all test data, but we change options.
 The text is made that there should be an error for each combination of options tested.
 
 `text=emily (emi38s) has has found a bug at https://yandex.ru`
@@ -78,6 +78,10 @@ The text is made that there should be an error for each combination of options t
 |2  |IGNORE_DIGITS, IGNORE_CAPITALIZATION                                |ru (from yandex.ru)|ERROR_UNKNOWN_WORD    |
 |3  |IGNORE_URLS, IGNORE_CAPITALIZATION                                  |emi38s             |ERROR_UNKNOWN_WORD    |
 |4  |IGNORE_URLS, IGNORE_DIGITS, FIND_REPEAT_WORDS, IGNORE_CAPITALIZATION|has                |ERROR_REPEATED_WORD   |
+
+**A lot of bugs! (REST)** Basically all test data failed for REST because all the responses were empty.
+
+To check if the tests weren't broken, I entered the same data in the [web form](https://speller.yandex.net/services/spellservice?op=checkTexts) that Yandex offers. All of the data returned empty response bodies.
 
 ## htmlFormatTest
 
